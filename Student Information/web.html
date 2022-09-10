@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Form</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script type="text/javascript" src="basic.js">
+</script>
+</head>
+<body>
+<center><br><br>
+<abbr title="mitmysore"><img src="images.png"/></abbr>
+<br><br>
+<div style="border:5px solid #73AD21;border-radius:35px";>
+<table>
+<h1 style="color:red;"><b>STUDENT INFORMATION</b></h1>
+<form action="register.php" method="post">
+<tr>
+<td><label for="fname"><b>First name:</b></label></td>
+<td><input type="text" id="fname" name="fname" onblur="validatefname();" required></td>
+<td><span id="fnamePrompt"></span></td>
+</tr>
+<tr>
+<td><label for="lname"><b>Last name:</b></label></td>
+<td><input type="text" id="lname" name="lname" onblur="validatelname();" required></td>
+<td><span id="lnamePrompt"></span><br></td>
+</tr>
+<tr>
+<td><label for="a"><b>USN:</b></label></td>
+<td><input type="text" id="a" name="a" size:"10" onblur="validatea();" required></td>
+<td><span id="aPrompt"></span></td>
+</tr>
+<tr>
+<td><label for="branch"><b>Branch:</b></label></td>
+<td>CSE<input type=radio id="radio" name="radio" value="CSE"required>
+ISE<input type=radio id="radio" name="radio" value="ISE" required>
+EC<input type=radio id="radio" name="radio" value="EC" required>
+CV<input type=radio id="radio" name="radio" value="CV" required>
+MECH<input type=radio id="radio" name="radio" value="MECH" required>
+</td>
+</tr>
+<tr>
+<td><label for="sem"><b>Semester:</b></label></td>
+<td><select id="sem" name="sem"required>
+<option value="1st Semester">1st Semester</option>
+<option value="2nd Semester">2nd Semester</option>
+<option value="3rd Semester">3rd Semester</option>
+<option value="4th Semester">4th Semester</option>
+<option value="5th Semester">5th Semester</option>
+<option value="6th Semester">6th Semester</option>
+<option value="7th Semester">7th Semester</option>
+<option value="8th Semester">8th Semester</option>
+</td>
+</tr>
+<tr>
+<td><label for="gender"><b>Gender:</b></label></td>
+<td>Male:<input type=radio id="male" name="male" value="Male"required>&nbsp;&nbsp;Female:
+<input type=radio id="male" name="male" value="Female"required></td>
+</tr>
+<tr>
+<td><label for="mail"><b>Mail Id:</b></label></td>
+<td><input type=email id="mail" name="mail" required></td>
+</tr>
+<tr>
+<td><label for="phone"><b>Phone Number:</b></label></td>
+<td><input type="tel" id="phone" name="phone" size:"10" onblur="validatephone();" placeholder="xxx-xxx-xxxx" required></td>
+<td><span id="phonePrompt"></span></td>
+</tr>
+<tr>
+<td><label for="dob"><b>select your brithday:</b></label>
+</td><td><input type="date" id="dob" name="dob" placeholder="dd-mm-yyyy" required >
+</td></tr>
+<tr>
+<td><label for="file"><b>Select a Photo:</b></label>
+</td><td><input type="file" id="file" name="file" >
+</td></tr>
+</table><br>
+<input type="submit" value="submit"><br><br>
+<input type="reset">
+<p><b>Note:</b>Only valid details are consider</p>
+</form>
+</div>
+<marquee behavior=alternate><b>Created by VSMP</b></marquee>
+</center>
+</body>
+</html>
